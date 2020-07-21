@@ -1,3 +1,4 @@
+// 評価・出品数の数値化
 @mixin showMypage-review-itemsBox {
   list-style: none;
   font-size: 20px;
@@ -9,7 +10,7 @@
 }
 
 .main-information {
-
+// プロフィール画像・ニックネーム・評価・出品数
   &__showMypage-contents1 {
     display: flex;
     height: 200px;
