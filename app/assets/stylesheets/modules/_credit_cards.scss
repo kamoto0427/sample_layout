@@ -2,30 +2,27 @@ a {
   text-decoration: none;
 }
 
+// 必須
 @mixin essential-redBox {
   background-color: red;
   color: #fff;
   padding: 3px;
   font-size: 14px;
 }
-
+// カード番号・セキュリティコードのテキストフィールド
 @mixin cardNumber-input {
   width: 300px;
   height: 50px;
   margin-top: 10px;
 }
-
+// 月・年選択ボックス
 .dateSelect {
   width: 140px;
   height: 50px;
   padding-left: 10px;
   margin-top: 10px;
 }
-
-.security-input {
-  @include cardNumber-input;
-}
-
+// クレジットカード登録画面
 .creditCard-wrapper {
   height: 100vh;
   padding-top: 50px;
@@ -58,9 +55,8 @@ a {
           @include essential-redBox;
         }
         input {
-          width: 300px;
-          height: 50px;
-          margin-top: 10px;
+          @include cardNumber-input;
+          padding-left: 10px;
         }
       }
       // 有効期限
@@ -81,6 +77,10 @@ a {
         }
         span {
           @include essential-redBox;
+        }
+        input {
+          @include cardNumber-input;
+          padding-left: 10px;
         }
       }
       // クレジット追加ボタン
