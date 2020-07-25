@@ -1,14 +1,18 @@
-.main-information {
+@mixin main-information__payTop {
+  height: 70px;
+  h2 {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+  border-bottom: ridge;
+  }
+}
 
+.main-information {
+  // 支払い方法
   &__payTop {
-    height: 70px;
-    h2 {
-    font-size: 25px;
-    font-weight: bold;
-    line-height: 50px;
-    text-align: center;
-    border-bottom: ridge;
-    }
+    @include main-information__payTop;
   }
 
   &__payMiddle {
@@ -41,4 +45,8 @@
       }
     }
   }
+}
+
+.wrapper {
+  @include main-information__payTop;
 }
